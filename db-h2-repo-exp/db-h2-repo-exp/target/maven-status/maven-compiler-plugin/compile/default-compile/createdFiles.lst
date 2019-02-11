@@ -1,0 +1,5 @@
+com\db\dbh2repoexp\RepoController.class
+com\db\dbh2repoexp\Status.class
+com\db\dbh2repoexp\dbRepository.class
+com\db\dbh2repoexp\ToDoItem.class
+com\db\dbh2repoexp\DbH2RepoExpApplication.class

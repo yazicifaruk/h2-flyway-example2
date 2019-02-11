@@ -1,0 +1,53 @@
+-------------------------------------------------------------------------------
+Test set: com.db.dbh2repoexp.DbH2RepoExpApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.837 s <<< FAILURE! - in com.db.dbh2repoexp.DbH2RepoExpApplicationTests
+contextLoads(com.db.dbh2repoexp.DbH2RepoExpApplicationTests)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V1__create_table.sql failed
+-------------------------------------
+SQL State  : HY004
+Error Code : 50004
+Message    : Unknown data type: "DUE_DATE"; SQL statement:
+create table Todo (id bigint not null auto_increment,username varchar(255) ,text varchar(255),status varchar(255),
+name due_date datetime,name estimate_time timestamp,name date_time Date) [50004-197]
+Location   : db/migration/V1__create_table.sql (C:\Users\pc\IdeaProjects\db-h2-repo-exp\db-h2-repo-exp\target\classes\db\migration\V1__create_table.sql)
+Line       : 1
+Statement  : create table Todo (id bigint not null auto_increment,username varchar(255) ,text varchar(255),status varchar(255),
+name due_date datetime,name estimate_time timestamp,name date_time Date)
+
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+
+Migration V1__create_table.sql failed
+-------------------------------------
+SQL State  : HY004
+Error Code : 50004
+Message    : Unknown data type: "DUE_DATE"; SQL statement:
+create table Todo (id bigint not null auto_increment,username varchar(255) ,text varchar(255),status varchar(255),
+name due_date datetime,name estimate_time timestamp,name date_time Date) [50004-197]
+Location   : db/migration/V1__create_table.sql (C:\Users\pc\IdeaProjects\db-h2-repo-exp\db-h2-repo-exp\target\classes\db\migration\V1__create_table.sql)
+Line       : 1
+Statement  : create table Todo (id bigint not null auto_increment,username varchar(255) ,text varchar(255),status varchar(255),
+name due_date datetime,name estimate_time timestamp,name date_time Date)
+
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: 
+
+Migration V1__create_table.sql failed
+-------------------------------------
+SQL State  : HY004
+Error Code : 50004
+Message    : Unknown data type: "DUE_DATE"; SQL statement:
+create table Todo (id bigint not null auto_increment,username varchar(255) ,text varchar(255),status varchar(255),
+name due_date datetime,name estimate_time timestamp,name date_time Date) [50004-197]
+Location   : db/migration/V1__create_table.sql (C:\Users\pc\IdeaProjects\db-h2-repo-exp\db-h2-repo-exp\target\classes\db\migration\V1__create_table.sql)
+Line       : 1
+Statement  : create table Todo (id bigint not null auto_increment,username varchar(255) ,text varchar(255),status varchar(255),
+name due_date datetime,name estimate_time timestamp,name date_time Date)
+
+Caused by: org.h2.jdbc.JdbcSQLException: 
+Unknown data type: "DUE_DATE"; SQL statement:
+create table Todo (id bigint not null auto_increment,username varchar(255) ,text varchar(255),status varchar(255),
+name due_date datetime,name estimate_time timestamp,name date_time Date) [50004-197]
+
